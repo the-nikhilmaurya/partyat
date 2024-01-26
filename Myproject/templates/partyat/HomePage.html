@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/myStyle.css" %}">
+ 
+
+  
+</head>
+
+
+<body class="bg-light">
+  <!-- navbar  mt-1 pt-0 pb-0-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-0  pt-0 pb-0  fixed-top ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> partyAt </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+          <ul class="navbar-nav  mb-2 mb-lg-0">
+
+            <!-- <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"> <img src="img_videos/baseline_person_white_24dp.png" alt="" srcset=""> </a>
+            </li> -->
+
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#aboutus">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#cafe">Cafe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#banquet">Banquet Hall</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" href="#restaurant">Restaurant</a>
+            </li>
+
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">Add Bussiness</a>
+            </li> -->
+
+
+            <li class="nav-item dropdown ">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Add Bussiness
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Add Cafe</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item " href="#">Add Restaurant</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Add Banquet Hall</a></li>
+              </ul>
+            </li>
+
+            <!-- <li class="nav-item ">
+              <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">contact us</a>
+            </li> -->
+
+          </ul>
+        </div>
+        <span class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+
+          <form class="d-flex ">
+            <input class="SearchBox" type="search" placeholder="Search cafe's,Restaurant" aria-label="Search">
+            <button id="Search_btn" class="btn btn-outline-dark " type="submit"><img
+                src="{% static "img_videos/baseline_search_white_24dp.png" %}" alt="" srcset=""></button>
+          </form>
+          <!-- <li class="nav-item"> -->
+          <a class="nav-link active" aria-current="page" href="#"> <img src="{% static "img_videos/baseline_person_white_24dp.png" %}"
+              alt="" srcset=""> </a>
+          <!-- </li> -->
+        </span>
+        <!-- </div> -->
+      </div>
+    </nav>
+  </div><!-- container fluid -->
+  <P></P>
+
+  <!-- carousel -->
+  <div class="container-fluid">
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <img src=".." class="d-block w-100" alt="..."> -->
+          <video class="d-block w-100 video-fluid" height:330px autoplay loop muted
+            src="{% static "img_videos/restaurant_add.mp4" %}"></video>
+
+          <div class="carousel-caption">
+            <h2 id="car-cap"> Enjoy your meal at your time</h2>
+            <h2> Don't need to stand in queue</h2>
+          </div>
+        </div>
+        <div class="carousel-item">
+
+          <img src="{% static "img_videos/coffee_carousel1.jpg" %}" height:330px class="d-block w-100"
+            alt="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/04LDEYRW59.jpg">
+
+          <!-- <video  class="video-fluid" autoplay loop muted src="restaurant_add.mp4"></video> -->
+
+        </div>
+        <div class="carousel-item">
+          <img src="{% static "img_videos/coffee_carousel2.jpg" %}" height:330px class="d-block w-100"
+            alt="https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/90V03Q5Y60.jpg">
+          <!-- <video  class="video-fluid d-block w-100"  autoplay loop muted src="hall_add.mp4"></video> -->
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <p></p>
+
+  <!-- section class gallery starts here -->
+  <section id="gallery" class="pt-5">
+    <div class="container">
+      <h2 id="h2_gallery"  class="text-center text-uppercase fw-bold  shadow-sm bg-light rounded mb-3">Gallery</h2>
+
+    <div class="container">
+        <div class="row g-3 gx-0 gy-0">
+
+            <!-- col 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" src="{% static "img_videos/lavish_getaway_banquet.mp4" %}" alt="" srcset="" class="card-img-top  "> -->
+                        <video id="gallery_video" src="{% static "img_videos/umaid_bhawan_hall.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">Umaid Bhawan jhodpur</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 2   width="950" height="650"-->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" src="{% static "img_videos/rosebelle_banquet.jpg" %}" alt="" srcset="" class="card-img-top " > -->
+                        <video id="gallery_video" src="{% static "img_videos/Taj_lake_palace_hall.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">Taj Lake Palace</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <img id="gallery_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top ">
+                        <!-- <video id="gallery_video" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" autoplay muted loop class="card-vid-top"></video> -->
+                        <h5 class="card-title text-center">Chandrasekarendra Saraswathi Auditorium</h5>
+
+                    </div>
+                </div>
+            </div>
+            <!-- col 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <img id="gallery_img" id="rad" src="{% static "img_videos/Jayalalitha_Jayaram_hall.jfif" %}" alt="" srcset="" class="card-img-top ">
+                        <h5 class="card-title text-center">Jayalalitha Jayaram Hall </h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 5 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="gallery_video" src="{% static "img_videos/City_Palace_Udaipur_banquet.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">City Palace,Udaipur</h5>
+
+                    </div>
+                </div>
+            </div>
+           
+            <!-- col 6 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="gallery_video" src= "{% static "img_videos/umaid_bhawan_hall.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">Umaid Bhawan jhodpur</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- col - 7 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="gallery_video" src="{% static "img_videos/coffee.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">Mine Coffee</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- col-8 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <!-- <img id="gallery_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="gallery_video" src="{% static "img_videos/the_oberoi_res.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <h5 class="card-title text-center">The Oberoi,Mumbai</h5>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div> <!-- row  -->
+
+    </div> <!-- container -->
+    </div>
+  </section>
+
+  <!-- section class gallery ends here -->
+
+
+
+  <!-- Seciton class cafe -->
+  <section id="cafe" class="pt-5">
+
+    <div class="container">
+      <h2 class="text-center text-uppercase font-bold  shadow-sm bg-light rounded">cafe's</h2>
+      <div class="row g-3 gx-0 gy-0">
+
+        <!-- col 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 ">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png" %}" alt=""
+                    srcset=""></button>
+                cafe Airoli
+              </h5>
+              <img id="cafe_img" src="{% static "img_videos/cafe_airoli.jfif" %}" alt="" srcset="" class="card-img-top  ">
+
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      
+        <!-- col 2   width="950" height="650"-->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png"  %}"alt=""
+                    srcset=""></button>
+                cafe bottom
+              </h5>
+              <!-- <img id="cafe_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top " > -->
+              <video id="cafe_video" src="{% static "img_videos/restaurant_add.mp4" %}" autoplay muted loop
+                class="card-vid-top"></video>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- col 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 ">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png" %}" alt=""
+                    srcset=""></button>
+                cafe divine
+              </h5>
+              <img id="cafe_img" src="{% static "img_videos/cafe_divine.jpg" %}" alt="" srcset="" class="card-img-top ">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 ">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png" %}" alt=""
+                    srcset=""></button>
+                Urban Cafeteria
+              </h5>
+              <img id="cafe_img" src="{% static "img_videos/urban_cafeteria.jpg" %}" alt="" srcset="" class="card-img-top ">
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!-- col 5 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 ">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png" %}" alt=""
+                    srcset=""></button>
+                Mine Coffee
+              </h5>
+              <!-- <img id="cafe_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+              <video id="cafe_video" src="{% static "img_videos/coffee.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!--col 6  -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card h-100 ">
+            <div class="card-body">
+              <h5 class="card-title">
+                <button id="location_btn" class="btn btn-light btn-outline-light"> <img src="{% static "img_videos/pin.png" %}" alt=""
+                    srcset=""></button>
+                Third Wave Coffee
+              </h5>
+              <!-- <img id="cafe_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+              <video id="cafe_video" src="{% static "img_videos/third_wave_coffee1.mp4" %}" autoplay muted loop
+                class="card-vid-top"></video>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                maiores repudiandae voluptatum vitae est
+              </P>
+
+                  <!-- Booking button -->
+                  <div>
+                    <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- col 7 -->
+
+
+
+      </div> <!-- row  -->
+
+    </div> <!-- container -->
+  </section>
+<!-- cafe-section ends here -->
+
+<!-- banquet-starts here -->
+  <section id="banquet" class="pt-5">
+    <div class="container">
+      <h2  class="text-center text-uppercase fw-bold  shadow-sm bg-light rounded">Banquet</h2>
+
+    <div class="container">
+        <div class="row g-3 gx-0 gy-0">
+
+            <!-- col 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                            Lavish Getaway
+                        </h5>
+                        <!-- <img id="banquet_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top  "> -->
+                        <video id="banquet_video" src="{% static "img_videos/lavish_getaway_banquet.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+                            <!-- Booking button -->
+                            <div>
+                              <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 2   width="950" height="650"-->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                                Rosebelle Banquet Hall
+                        </h5>
+                        <img id="banquet_img" src="{% static "img_videos/rosebelle_banquet.jpg" %}" alt="" srcset="" class="card-img-top " >
+                        <!-- <video id="banquet_video" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" autoplay muted loop class="card-vid-top"></video> -->
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                            City Palace,Udaipur
+                        </h5>
+                        <!-- <img id="banquet_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="banquet_video" src="{% static "img_videos/City_Palace_Udaipur_banquet.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- col 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                            Radisson vizag
+                        </h5>
+                        <!-- <img id="banquet_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                        <video id="banquet_video" src="{% static "img_videos/raddison_banquet.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- col 5 -->
+           
+
+
+        </div> <!-- row  -->
+
+    </div> <!-- container -->
+    </div>      <!-- banquet-container -->
+  </section>    <!-- banquet-section -->
+<!-- banquet ends here -->
+
+  <!-- halls section starts here -->
+  <section id="hall" class="pt-5 pb-3">
+    <div class="container">
+      <h2  class="text-center text-uppercase fw-bold  shadow-sm bg-light rounded">Hall's</h2>
+
+    <div class="container">
+        <div class="row g-3 gx-0 gy-0">
+
+            <!-- col 1 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                            Umaid Bhawan jhodpur
+                        </h5>
+                        <!-- <img id="hall_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top  "> -->
+                        <video id="hall_video" src="{% static "img_videos/umaid_bhawan_hall.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+
+                    
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 2   width="950" height="650"-->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                                Taj Lake Palace
+                        </h5>
+                        <!-- <img id="hall_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top " > -->
+                        <video id="hall_video" src="{% static "img_videos/Taj_lake_palace_hall.mp4" %}" autoplay muted loop class="card-vid-top"></video>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- col 3 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                                    Chandrasekarendra Saraswathi Auditorium
+                        </h5>
+                        <img id="hall_img" id="rad" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top ">
+                        <!-- <video id="hall_video" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" autoplay muted loop class="card-vid-top"></video> -->
+
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- col 4 -->
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card h-100 ">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                    src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                                    Jayalalitha Jayaram Hall
+                        </h5>
+                        <img id="hall_img" id="rad" src="{% static "img_videos/Jayalalitha_Jayaram_hall.jfif" %}" alt="" srcset="" class="card-img-top ">
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                            maiores repudiandae voluptatum vitae est
+                          </P>
+
+                              <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- col 5 -->
+           
+
+
+        </div> <!-- row  -->
+
+    </div> <!-- container -->
+    </div>      <!-- halls container -->
+  </section>    <!-- halls-section -->
+  <!-- halls section ends here -->
+
+
+  <!-- restaurants -->
+  <section id="restaurant" class="pt-5 pb-3">
+
+    <div class="container">
+      
+      <h2 class="text-center text-uppercase font-bold  shadow-sm bg-light rounded">Restaurant</h2>
+      <div class="container">
+          <div class="row g-3 gx-0 gy-0">
+  
+              <!-- col 1 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              The Oberoi Mumbai
+                          </h5>
+                          <!-- <img id="res_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                          <video id="res_video" src="{% static "img_videos/the_oberoi_res.mp4" %}" autoplay muted loop
+                              class="card-vid-top"></video>
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 1 ends here -->
+  
+              <!-- col 2-->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Taj Falaknuma
+                          </h5>
+                          <!-- <img id="res_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                          <video id="res_video" src="{% static "img_videos/Taj_Falaknuma_Palace_res.mp4" %}" autoplay muted loop
+                              class="card-vid-top"></video>
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 2 ends here -->
+  
+  
+              <!-- col 3 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Wow! Momo
+                          </h5>
+                          <img id="res_img" id="rad" src="{% static "img_videos/wow_momo_res.jfif" %}" alt="" srcset=""
+                              class="card-img-top ">
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 3 ends here -->
+  
+              <!-- col 4 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Urban Tadka
+                          </h5>
+                          <img id="res_img" id="rad" src="{% static "img_videos/urban_tadka_res.jfif" %}" alt="" srcset=""
+                              class="card-img-top ">
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 4 ends here -->
+  
+  
+  
+              <!-- col 5 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Hotel prashant
+                          </h5>
+                          <img id="res_img" src="{% static "img_videos/prashant_res.webp" %}" alt="" srcset="" class="card-img-top ">
+                          <!-- <video id="res_video" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" autoplay muted loop class="card-vid-top"></video> -->
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                          
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 5 ends here -->
+  
+  
+  
+              <!--col 6  -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Taj Hotel
+                          </h5>
+                          <!-- <img id="res_img" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" alt="" srcset="" class="card-img-top "> -->
+                          <video id="res_video" src="{% static "img_videos/taj_hotel_res.mp4" %}" autoplay muted loop
+                              class="card-vid-top"></video>
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+              <!-- col 6 ends here -->
+  
+  
+              <!-- col 7 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Bistro Food Bar
+                          </h5>
+                          <img id="res_img" src="{% static "img_videos/bistro_res.jpg" %}" alt="" srcset="" class="card-img-top ">
+                          <!-- <video id="res_video" src="{% static "img_videos/Chandrasekarendra_SaraswathiAudi_hall.jfif" %}" autoplay muted loop class="card-vid-top"></video> -->
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                      </div>
+  
+                      </div>
+                  </div>
+              </div>
+  
+              <!-- col 7 ends here -->
+  
+  
+              <!-- col 8 -->
+              <div class="col-12 col-md-6 col-lg-3">
+                  <div class="card h-100 ">
+                      <div class="card-body">
+                          <h5 class="card-title">
+                              <button id="location_btn" class="btn btn-light btn-outline-light"> <img
+                                      src="{% static "img_videos/pin.png" %}" alt="" srcset=""></button>
+                              Lord Forklore
+                          </h5>
+                          <img id="res_img" src="{% static "img_videos/lord_fork_res.webp" %}" alt="" srcset="" class="card-img-top  ">
+  
+                          <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam labore aperiam saepe, ea
+                              maiores repudiandae voluptatum vitae est
+                            </P>
+
+                                <!-- Booking button -->
+                        <div>
+                      
+                          <a href="{% url 'BookingTable' %}"><button type="button" class="btn1 mt-2 mb-3">  Book table</button></a>
+                       
+                      </div>
+
+                      
+                      </div>
+                  </div>
+              </div>
+              <!-- col 8 ends here -->
+  
+  
+              <!-- col  9 -->
+  
+          </div> <!-- row  -->
+      </div> <!-- container -->
+    </div>
+
+  </section>      <!-- restaurnat - section -->
+
+<!-- footer class -->
+  <section id="aboutus" class="pt-5">
+  <footer class="text-center text-lg-start text-white" style=" background-color:rgb(62,69,81); width: 100%;"  >
+  <div class="container p-4 pb-0">
+      <section>
+          <div class="row">
+              <div class="col-lg-4 col-md-4 md-4 mb-md-0">
+                  
+                  <h5 class="text-uppercase">about us</h5>
+                  <p>write Something about urself</p>
+              </div>
+              
+              <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">contact us</h5>
+                  <p style="cursor:pointer;">nikhilmaurya2601@gmail.com</p>
+              </div>
+              
+              <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">know more </h5>
+              </div>
+              
+              
+          </div>
+      </section>
+      <hr class="mb-4">
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0,0,0,0.2);">
+      <a class="text-white" href="#" style="text-decoration: none;">@ 2023 partyAt: All Rights Reserved</a>
+  </div>
+</footer>
+</section>
+  
+
+  
+
+  <!-- cdn links -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
